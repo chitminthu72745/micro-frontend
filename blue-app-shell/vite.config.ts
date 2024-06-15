@@ -7,19 +7,11 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "remote-app-one",
-      filename: "remote1.js",
-      // Modules to expose
-      exposes: {
-        "./RemoteApp1": "./src/App.tsx",
+      name: "blue-app-shell",
+      remotes: {
+        sharedComp1: "http://localhost:5174/dist/assets/remote1.js",
       },
       shared: ["react", "react-dom"],
     }),
   ],
-  build: {
-    // modulePreload: false,
-    target: "esnext",
-    minify: true,
-    // cssCodeSplit: false,
-  },
 });

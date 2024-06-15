@@ -7,11 +7,11 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "remote-app-one",
-      filename: "remote1.js",
+      name: "remote-app-two",
+      filename: "remote2.js",
       // Modules to expose
       exposes: {
-        "./RemoteApp1": "./src/App.tsx",
+        "./RemoteApp2": "./src/App.tsx",
       },
       shared: ["react", "react-dom"],
     }),
@@ -19,7 +19,7 @@ export default defineConfig({
   build: {
     // modulePreload: false,
     target: "esnext",
-    minify: true,
+    // minify: false,
     // cssCodeSplit: false,
   },
 });

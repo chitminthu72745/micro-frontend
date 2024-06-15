@@ -4,9 +4,8 @@ import "./App.css";
 function App() {
   return (
     <>
-      <h1>Remote One</h1>
-      <div>TEST</div>
-      {/* <Link to={"http://localhost:5174/"}>Main App Shell</Link> */}
+      <h1>Remote Two</h1>
+      {/* <Link to={"/"}>Main App Shell</Link> */}
     </>
   );
 }
